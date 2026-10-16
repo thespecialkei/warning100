@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'HanGulim';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/2610081905@regular/regular/한굴림체-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+  }
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #ffffff; /* 페이지 배경색 */
+  color: #111111;            /* 기본 글씨색 */
+  font-family: 'HanGulim', sans-serif;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+
+/*10열 그리드*/
+
+.page {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  width: 100%;
+  align-items: start;
+}
+
+/*각 열*/
+
+.caution {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.caution2 {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+/*각 문단*/
+
+.caution li {
+  padding: 8px 4px;
+  margin: 0;
+
+  color: #111111;             /* 문단 글씨색 */
+  background-color: transparent; /* 문단 배경색 */
+
+  overflow-wrap: anywhere;
+  border-bottom: 1px;
+  text-align: justify;
+  text-align-last: justify;
+}
+.caution2 li {
+    padding: 8px 4px;
+    margin: 0;
+  
+    color: #ffffff;             /* 문단 글씨색 */
+    background-color: black; /* 문단 배경색 */
+  
+    overflow-wrap: anywhere;
+    border-bottom: 1px;
+    text-align: justify;
+    text-align-last: justify;
+  }
+
+
+/* =========================
+   5. 반응형 설정
+   ========================= */
+
+/* 태블릿 */
+@media (max-width: 900px) {
+  body {
+    font-size: 12px;
+  }
+
+  .column li {
+    padding: 10px 5px;
+  }
+}
+
+
+/* 모바일 */
+@media (max-width: 600px) {
+  body {
+    font-size: 11px;
+  }
+
+  .column li {
+    padding: 8px 3px;
+  }
+}
